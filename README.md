@@ -1,8 +1,9 @@
 # Project - NLW
 A project made in nlw#2
-<p align="center">
+<p align="right">
+  
+  ![image](https://github.com/hugoles/Project-1/assets/67278688/751c2517-8377-49ba-a2bf-2ec70a707a2d)
 
-![image](https://github.com/hugoles/Project-1/assets/67278688/751c2517-8377-49ba-a2bf-2ec70a707a2d)
 </p>
 <p align="center">	
   <img alt="Repository size" src="https://img.shields.io/github/repo-size/Suburbanno/proffy?color=774DD6">
