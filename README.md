@@ -1,5 +1,5 @@
 # Project - NLW
-<p align="center"">A project made in nlw#2</p>
+A project made in nlw#2
 <p align="center">
 
 ![logo](https://github.com/hugoles/Project-1/assets/67278688/87404591-079c-4521-921b-7f3b9fd39b8d)</p>
