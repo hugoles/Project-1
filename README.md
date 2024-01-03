@@ -23,23 +23,13 @@ Provide a brief overview of your project. What is its purpose? What technologies
 
 ## Screenshots
 
-Include screenshots or images showcasing your project. For example:
+![Screenshot_10](https://github.com/hugoles/Project-1/assets/67278688/e48806ce-a832-4711-aee3-99c2f2dd3a8f)
 
-![Placeholder Gif](https://placekitten.com/800/400) <!-- Replace with your actual gif URL -->
 
 ## Viewing the Project
 
 To view this project, simply open the HTML files in your browser. The necessary modifications have been made to facilitate easy visualization.
 
-## Getting Started
+## How works
 
-Provide instructions on how to set up and run your project locally. Include any dependencies that need to be installed.
-
-```bash
-# Clone the repository
-git clone https://github.com/hugoles/Project-1.git
-
-# Navigate to the project folder
-cd Project-1
-
-# Open the HTML files in your browser
+![demohappy](https://github.com/hugoles/Project-1/assets/67278688/d25f240e-b368-40e9-9406-7585d9405815)
