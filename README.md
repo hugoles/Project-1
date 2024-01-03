@@ -1,9 +1,8 @@
 # Project - NLW
-A project made in nlw#2
+<p align="center"">A project made in nlw#2</p>
 <p align="center">
-![image](https://github.com/hugoles/Project-1/assets/67278688/b4c0180e-1089-43dc-891f-c7125d5139e1)
+</p>![logo](https://github.com/hugoles/Project-1/assets/67278688/6d04b443-2d89-43ca-be0b-7ef6f14f88da)
 
-</p>
 <p align="center">	
   <img alt="Repository size" src="https://img.shields.io/github/repo-size/Suburbanno/proffy?color=774DD6">
   <a aria-label="Completed" href="https://nextlevelweek.com/episodios/omnistack/edicao/2">
