@@ -9,7 +9,7 @@ A project created during NLW#3, a week-long coding event that provides hands-on 
 <p align="center">	
   <img alt="Repository size" src="https://img.shields.io/github/repo-size/hugoles/Project-1?color=774DD6">
   <a href="https://nextlevelweek.com/episodios/omnistack/edicao/3" aria-label="Completed NLW#3">
-    <img alt="NLW#3" src="https://img.shields.io/badge/NLW%3-Completed-774DD6">
+    <img alt="NLW#3" src="https://img.shields.io/badge/NLW3-Completed-774DD6">
   </a>
 </p>
 
