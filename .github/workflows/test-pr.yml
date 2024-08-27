@@ -1,0 +1,62 @@
+name: Discord Notification for Pull Requests
+
+on:
+  pull_request_target:
+    types: [opened, reopened, synchronize, ready_for_review]
+  schedule:
+    - cron: '25 4 * * *'  # every day at 00:50 BRT (03:50 UTC)
+
+env:
+  DISCORD_WEBHOOK: https://discord.com/api/webhooks/1274913362899107860/IXhfomaakMSLwvy_ZmBX2BUl0JMz8q03j93sn3aBvv5YsYMbh_mXmk2gE8pyN89Hg2c6
+
+jobs:
+  notify-discord:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request_target'
+
+    steps:
+      - name: Send notification to Discord
+        if: ${{ !github.event.pull_request.draft }}
+        uses: Ilshidur/action-discord@master
+        env:
+          DISCORD_WEBHOOK: ${{ env.DISCORD_WEBHOOK }}
+        with:
+          args: |
+            **New Pull Request Ready for Review** 🚀
+            Reviewers : <@&1244738109422178426>
+            Repository: ${{ github.event.repository.full_name }}
+            Pull Request: ${{ github.event.pull_request.title }} (#${{ github.event.pull_request.number }})
+            Author: ${{ github.event.pull_request.user.login }}
+            URL: ${{ github.event.pull_request.html_url }}
+
+  remind-discord:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'schedule'
+
+    steps:
+      - name: List Open Pull Requests
+        id: list_prs
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const { data: pullRequests } = await github.rest.pulls.list({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'open',
+            });
+            if (pullRequests.length > 0) {
+              return pullRequests.map(pr => `- #${pr.number}: ${pr.title} by ${pr.user.login} (${pr.html_url})`).join('\n');
+            }
+            return 'No open pull requests.';
+
+      - name: Send daily reminder to Discord
+        if: steps.list_prs.outputs.result != 'No open pull requests.'
+        uses: Ilshidur/action-discord@master
+        env:
+          DISCORD_WEBHOOK: ${{ env.DISCORD_WEBHOOK }}
+        with:
+          args: |
+            **Daily Reminder for Open Pull Requests** 🕒
+            Reviewers : <@&1244738109422178426>
+            There are currently open pull requests that need your attention:
+            ${{ steps.list_prs.outputs.result }}
