@@ -48,6 +48,8 @@ jobs:
               return pullRequests.map(pr => `- #${pr.number}: ${pr.title} by ${pr.user.login} (${pr.html_url})`).join('\n');
             }
             return 'No open pull requests.';
+        env:
+          GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
 
       - name: Send daily reminder to Discord
         if: steps.list_prs.outputs.result != 'No open pull requests.'
