@@ -7,6 +7,7 @@ on:
     - cron: '42 4 * * *'  # every day at 00:50 BRT (03:50 UTC)
   workflow_dispatch: 
 
+
 env:
   DISCORD_WEBHOOK: https://discord.com/api/webhooks/1277459829656518727/hNIvpVpBKeHMbgT_UjBFXx3ZDWMIUgyWprDneVuuqo-w7eOckhAlxNDbm-junRYbOnYu
 
@@ -49,6 +50,8 @@ jobs:
               return pullRequests.map(pr => `- #${pr.number}: ${pr.title} by ${pr.user.login} (${pr.html_url})`).join('\n');
             }
             return 'No open pull requests.';
+        env:
+          GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
 
       - name: Send daily reminder to Discord
         if: steps.list_prs.outputs.result != 'No open pull requests.'
