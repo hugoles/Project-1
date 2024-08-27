@@ -5,6 +5,7 @@ on:
     types: [opened, reopened, synchronize, ready_for_review]
   schedule:
     - cron: '36 4 * * *'  # every day at 00:50 BRT (03:50 UTC)
+  workflow_dispatch: 
 
 env:
   DISCORD_WEBHOOK: https://discord.com/api/webhooks/1277459829656518727/hNIvpVpBKeHMbgT_UjBFXx3ZDWMIUgyWprDneVuuqo-w7eOckhAlxNDbm-junRYbOnYu
@@ -31,7 +32,7 @@ jobs:
 
   remind-discord:
     runs-on: ubuntu-latest
-    if: github.event_name == 'schedule'
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
 
     steps:
       - name: List Open Pull Requests
