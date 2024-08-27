@@ -7,7 +7,7 @@ on:
     - cron: '25 4 * * *'  # every day at 00:50 BRT (03:50 UTC)
 
 env:
-  DISCORD_WEBHOOK: https://discord.com/api/webhooks/1274913362899107860/IXhfomaakMSLwvy_ZmBX2BUl0JMz8q03j93sn3aBvv5YsYMbh_mXmk2gE8pyN89Hg2c6
+  DISCORD_WEBHOOK: https://discord.com/api/webhooks/1277459829656518727/hNIvpVpBKeHMbgT_UjBFXx3ZDWMIUgyWprDneVuuqo-w7eOckhAlxNDbm-junRYbOnYu
 
 jobs:
   notify-discord:
