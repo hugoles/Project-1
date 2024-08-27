@@ -4,7 +4,7 @@ on:
   pull_request_target:
     types: [opened, reopened, synchronize, ready_for_review]
   schedule:
-    - cron: '25 4 * * *'  # every day at 00:50 BRT (03:50 UTC)
+    - cron: '33 4 * * *'  # every day at 00:50 BRT (03:50 UTC)
 
 env:
   DISCORD_WEBHOOK: https://discord.com/api/webhooks/1277459829656518727/hNIvpVpBKeHMbgT_UjBFXx3ZDWMIUgyWprDneVuuqo-w7eOckhAlxNDbm-junRYbOnYu
