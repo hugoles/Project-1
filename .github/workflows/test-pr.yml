@@ -4,7 +4,7 @@ on:
   pull_request_target:
     types: [opened, reopened, synchronize, ready_for_review]
   schedule:
-    - cron: '42 4 * * *'  # every day at 00:50 BRT (03:50 UTC)
+    - cron: '52 4 * * *'  # every day at 00:50 BRT (03:50 UTC)
   workflow_dispatch: 
 
 
